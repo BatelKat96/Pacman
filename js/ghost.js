@@ -110,6 +110,12 @@ function eatingGhost(pos) {
             console.log('gGhosts[i]:', gGhosts[i])
             console.log('i:', i)
 
+            if (gGhosts[i].currCellContent === FOOD) {
+                gFoodOnBoard--
+                updateScore(1)
+                gGhosts[i].currCellContent = EMPTY
+            }
+
             var deadGhost = gGhosts.splice(i, 1)[0]
             console.log('ghostLoction:', ghostLoction)
             console.log('deadGhost:', deadGhost)

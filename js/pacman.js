@@ -1,6 +1,7 @@
 'use strict'
 
 const PACMAN = '👉'
+const PACMAN_IMG = '<img src="pacman.png" width=20px>'
 var gPacman
 
 function createPacman(board) {
@@ -14,7 +15,7 @@ function createPacman(board) {
         isSuper: false,
         deg: '0'
     }
-    gBoard[gPacman.location.i][gPacman.location.j] = PACMAN
+    gBoard[gPacman.location.i][gPacman.location.j] = PACMAN_IMG
 
 }
 
@@ -118,6 +119,6 @@ function getNextLocation(eventKeyboard) {
 
 function getPacmanHTML(deg) {
 
-    return `<div class="pacman" style="transform:rotate(${deg}deg);">${PACMAN}</span>`
+    return `<div class="pacman" style="transform:rotate(${deg}deg);">${PACMAN_IMG}</span>`
 
 }
